@@ -1,0 +1,17 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+    <p>Last Login: {{ last_login }} </p>
+    {% if top_list %}
+        <br>
+        <h2>List of Topics</h2>
+        <div class="course-list-container">
+        <ol class="list-group list-group-numbered">
+            {% for top in top_list %}
+                <li class="list-group-item"><a href="{% url "myapp:detail" top.id %}">{{ top.name}}</a></li>
+            {% endfor %}
+        </ol>
+        </div>
+    {% else %}
+        <strong>There are no available topics!</strong>
+    {% endif %}
+{% endblock %}

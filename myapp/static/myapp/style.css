@@ -1,0 +1,53 @@
+h1 {
+  background-color: #a1c9d9;
+  font-size: 30px;
+  font-style: normal;
+  text-align: center;
+  color: #286fbf;
+}
+
+h2 {
+  text-align: center;
+}
+
+.course-list-container {
+  width: 70%;
+  margin: 20px auto 20px;
+}
+
+.course-list-container a {
+  color: black !important;
+}
+.course-list-container li:hover {
+  background-color: lightgrey;
+}
+.course-row:hover{
+  background-color: lightgrey;
+}
+.width-80 {
+  width: 80%;
+  margin: auto;
+}
+.course-interested {
+  width: 80%;
+  margin: auto;
+  /* text-align: center; */
+}
+.footer {
+  text-align: center;
+}
+
+.footer button {
+  margin: 10px;
+}
+
+.footer button a {
+  text-decoration: none;
+}
+.order-container{
+    text-align: center;
+}
+.hbar1 {
+  display: inline;
+  margin: 15px;
+}

@@ -1,0 +1,20 @@
+{% extends 'myapp/base.html' %}
+{% block title %}
+    Detail
+{% endblock %}
+{% block body_block %}
+    <h2>Topic: <i>{{ topic.name }}</i></h2>
+    <h2>Category: <i>{{ topic.category }}</i></h2>
+    {% if course_list %}
+        <h2>Courses:</h2>
+         <div class="course-list-container">
+        <ol class="list-group list-group-numbered">
+            {% for course in course_list %}
+                <li class="list-group-item">{{ course.name }}</li>
+            {% endfor %}
+        </ol></div>
+    {% else %}
+        <h2>No courses are available on this topic</h2>
+    {% endif %}
+    <br/>
+{% endblock %}

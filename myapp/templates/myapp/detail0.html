@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>detail</title>
+</head>
+<body>
+    <h2>Topic: <i>{{ topic.name }}</i></h2>
+    <h2>Category: <i>{{ topic.category }}</i></h2>
+    {% if course_list %}
+        <h2>Courses:</h2>
+        <ol>
+            {% for course in course_list %}
+                <li>{{ course.name }}</li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <h2>No courses are available on this topic</h2>
+    {% endif %}
+    <br/>
+    <p><a href="{% url "myapp:index" %}">Main page using url namespacing</a></p>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends 'myapp/base.html' %}
+{% block title %}
+    Place Order
+{% endblock %}
+{% block body_block %}
+    <h2>Courses Available</h2>
+    {% if courlist %}
+        <div class="width-80">
+            <table class="table">
+                <tr>
+                    <th>Course</th>
+                    <th>Price</th>
+                </tr>
+                {% for course in courlist %}
+                    <tr class="course-row">
+                        <td>{{ course.name }}</td>
+                        <td>${{ course.price }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% else %}
+        <h2>No courses are available</h2>
+    {% endif %}
+    <h2>Place Order</h2>
+    <div class="width-80">
+        <div class="order-form">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+    </div>
+{% endblock %}
